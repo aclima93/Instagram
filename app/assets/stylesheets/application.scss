@@ -16,3 +16,81 @@
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ body {
+   background-color: #323232;
+   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ }
+
+ .navbar-brand {
+   a {
+     color: #D47F10;
+   }
+ }
+
+ .navbar-default {
+   background-color: #202020;
+   height: 54px;
+   .navbar-nav li a {
+     color: #D47F10;
+   }
+ }
+
+ .navbar-container {
+   width: 640px;
+   margin: 0 auto;
+ }
+
+ .posts-wrapper {
+   padding-top: 40px;
+   margin: 0 auto;
+   max-width: 642px;
+   width: 100%;
+ }
+
+ .post {
+   background-color: #202020;
+   border-color: #844A00;
+   border-style: solid;
+   border-radius: 3px;
+   border-width: 1px;
+   margin-bottom: 60px;
+ }
+
+ .post-head {
+   height: 64px;
+   padding: 14px 20px;
+   color: #D47F10;
+   font-size: 15px;
+   line-height: 18px;
+   .thumbnail {}
+   .name {
+     display: block;
+   }
+ }
+
+ .image {
+   border-bottom: 1px solid #844A00;
+   border-top: 1px solid #844A00;
+ }
+
+ .caption {
+   padding: 24px 24px;
+   font-size: 15px;
+   line-height: 18px;
+   color: #FFBC65;
+ }
+
+ .form-wrapper {
+   width: 60%;
+   margin: 20px auto;
+   background-color: #202020;
+   padding: 40px;
+   border: 1px solid #844A00;
+   border-radius: 3px;
+ }
+
+ .edit-links {
+   margin-top: 20px;
+   margin-bottom: 40px;
+ }
