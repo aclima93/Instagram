@@ -33,6 +33,9 @@
    height: 54px;
    .navbar-nav li a {
      color: #D47F10;
+     &:hover {
+        color: #B36000;
+     }
    }
  }
 
