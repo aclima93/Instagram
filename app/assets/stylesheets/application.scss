@@ -34,6 +34,8 @@ a {
 	}
 }
 
+/* ## NAVBAR CUSTOMISATIONS ## */
+
 .navbar-default {
 	background-color: $color-background;
 	height: 54px;
@@ -48,7 +50,7 @@ a {
 }
 
 .navbar-container {
-	width: 640px;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -59,6 +61,8 @@ a {
 	width: 100%;
 }
 
+/* ## POST CUSTOMISATIONS ## */
+
 .post {
 	background-color: $color-background;
 	border-color: $color-accent;
@@ -66,31 +70,92 @@ a {
 	border-radius: 3px;
 	border-width: 1px;
 	margin-bottom: 60px;
-}
-
-.post-head {
-	height: 64px;
-	padding: 14px 20px;
-	color: $color-primary;
-	font-size: 15px;
-	line-height: 18px;
-	.thumbnail {}
-	.name {
-		display: block;
+	.post-head {
+		flex-direction: row;
+		height: 64px;
+		padding-left: 24px;
+		padding-right: 24px;
+		padding-top: 24px;
+		color: $color-primary;
+		font-size: 15px;
+		line-height: 18px;
+		.user-name, .time-ago {
+			display: inline;
+		}
+		.user-name {
+			font-weight: 500;
+		}
+		.time-ago {
+			color: $color-accent;
+			float: right;
+		}
+		.image {
+			border-bottom: 1px solid $color-accent;
+			border-top: 1px solid $color-accent;
+		}
 	}
 }
 
-.image {
-	border-bottom: 1px solid $color-accent;
-	border-top: 1px solid $color-accent;
-}
-
-.caption {
-	padding: 24px 24px;
+.post-bottom {
+	.user-name, .comment-content {
+		display: inline;
+	}
+	.caption {
+		margin-bottom: 7px;
+	}
+	.user-name {
+		font-weight: 500;
+		margin-right: 0.3em;
+		color: $color-primary;
+		font-size: 15px;
+	}
+  .user-name, .caption-content {
+	display: inline;
+  }
+  .comment {
+	margin-top: 7px;
+	.user-name {
+		font-weight: 500;
+		margin-right: 0.3em;
+	}
+	.delete-comment {
+		float: right;
+		color: $color-accent;
+	}
+	}
+	margin-bottom: 7px;
+	padding-top: 24px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-bottom: 10px;
 	font-size: 15px;
 	line-height: 18px;
+}
+
+.comment_content {
+	font-size: 15px;
+	line-height: 18px;
+	border: medium none;
+	width: 100%;
 	color: $color-secondary;
 }
+
+.comment-like-form {
+	padding-top: 24px;
+	margin-top: 13px;
+	margin-left: 24px;
+	margin-right: 24px;
+	min-height: 68px;
+	align-items: center;
+	border-top: 1px solid $color-accent;
+	flex-direction: row;
+	justify-content: center;
+	.like-button {
+		color: $color-accent;
+	}
+}
+
+/* ## Wrapper and styling for the new and edit views ## */
 
 .form-wrapper {
 	width: 60%;
@@ -104,17 +169,4 @@ a {
 .edit-links {
 	margin-top: 20px;
 	margin-bottom: 40px;
-}
-
-.form-inputs {
-	display: flex;
-	color: $color-primary;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-content: space-around;
-}
-
-.form-actions {
-	display: flex;
-	justify-content: center;
 }
