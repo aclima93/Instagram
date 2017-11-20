@@ -1,67 +1,67 @@
 class PostsController < ApplicationController
 
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :owned_post, only: [:edit, :update, :destroy]
+	before_action :set_post, only: [:show, :edit, :update, :destroy]
+	before_action :owned_post, only: [:edit, :update, :destroy]
 
-  # actions
+	# actions
 
-  def index
+	def index
 	@posts = Post.all
-  end
+	end
 
-  def new
+	def new
 	@post = current_user.posts.build
-  end
+	end
 
-  def create
+	def create
 	@post = current_user.posts.build(post_params)
 
 	if @post.save
-	  flash[:success] = "Your post was successfully created!"
-	  redirect_to posts_path
+		flash[:success] = "Your post was successfully created!"
+		redirect_to posts_path
 	else
-	  flash.now[:alert] = "Your new post couldn't be created! Please check the form."
-	  render :new
+		flash.now[:alert] = "Your new post couldn't be created! Please check the form."
+		render :new
 	end
-  end
+	end
 
-  def show
-  end
+	def show
+	end
 
-  def edit
-  end
+	def edit
+	end
 
-  def update
+	def update
 	if @post.update(post_params)
-	  flash[:success] = "Your post was successfully updated!"
-	  redirect_to(posts_path(@post))
+		flash[:success] = "Your post was successfully updated!"
+		redirect_to(posts_path(@post))
 	else
-	  flash.now[:alert] = "Your new post couldn't be updated! Please check the form."
-	  render :edit
+		flash.now[:alert] = "Your new post couldn't be updated! Please check the form."
+		render :edit
 	end
-  end
+	end
 
-  def destroy
+	def destroy
 	@post.destroy
 	flash[:success] = "Your post was successfully deleted!"
 	redirect_to posts_path
-  end
+	end
 
-  private
+	private
 
-  def post_params
+	def post_params
 	params.require(:post).permit(:image, :caption)
-  end
+	end
 
-  def set_post
+	def set_post
 	@post = Post.find(params[:id])
-  end
+	end
 
-  def owned_post
+	def owned_post
 	unless current_user == @post.user
 		flash[:alert] = "That post doesn't belong to you!"
 		redirect_to root_path
 	end
-  end
+	end
 
 end
