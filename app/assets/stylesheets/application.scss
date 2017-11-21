@@ -70,6 +70,7 @@ a {
 	border-radius: 3px;
 	border-width: 1px;
 	margin-bottom: 60px;
+
 	.post-head {
 		flex-direction: row;
 		height: 64px;
@@ -79,16 +80,20 @@ a {
 		color: $color-primary;
 		font-size: 15px;
 		line-height: 18px;
+
 		.user-name, .time-ago {
 			display: inline;
 		}
+
 		.user-name {
 			font-weight: 500;
 		}
+
 		.time-ago {
 			color: $color-accent;
 			float: right;
 		}
+
 		.image {
 			border-bottom: 1px solid $color-accent;
 			border-top: 1px solid $color-accent;
@@ -109,19 +114,23 @@ a {
 		color: $color-primary;
 		font-size: 15px;
 	}
-  .user-name, .caption-content {
-	display: inline;
-  }
-  .comment {
-	margin-top: 7px;
-	.user-name {
-		font-weight: 500;
-		margin-right: 0.3em;
+	.user-name, .caption-content {
+		display: inline;
 	}
-	.delete-comment {
-		float: right;
-		color: $color-accent;
+	.comments {
+		padding-top: 24px;
+		border-top: 1px solid $color-accent;
 	}
+	.comment {
+		margin-top: 7px;
+		.user-name {
+			font-weight: 500;
+			margin-right: 0.3em;
+		}
+		.delete-comment {
+			float: right;
+			color: $color-accent;
+		}
 	}
 	margin-bottom: 7px;
 	padding-top: 24px;
