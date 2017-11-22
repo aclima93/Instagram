@@ -21,8 +21,16 @@ $color-primary: #D47F10;
 $color-secondary: #FFBC65;
 $color-accent: #844A00;
 $color-background: #202020;
+$color-text: #f0f0f0;
 
-body {
+/* ## GENERAL CUSTOMISATIONS ## */
+
+html, body, .viewport {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	
 	background-color: #323232;
 	font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
@@ -34,7 +42,52 @@ a {
 	}
 }
 
+/* ## REGISTRATION/LOGIN CUSTOMISATIONS ## */
+
+.registration-bg, .login-bg {
+	padding-top: 4em;
+	height: 100%;
+	width: 100%;
+	background-image: image-url('background.jpg');
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.log-in{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	border-style: solid;
+	border: 1px;
+	border-color: $color-accent;
+}
+
+.panel {
+	border-radius: 8px;
+}
+
+.panel-heading{
+	h1 {
+		text-align: center;
+	}
+}
+.panel-body {
+
+}
+
 /* ## NAVBAR CUSTOMISATIONS ## */
+
+.navbar {
+	margin: 0px;
+}
+
+.alert {
+	margin-bottom: 0px;
+}
 
 .navbar-default {
 	background-color: $color-background;
@@ -146,7 +199,7 @@ a {
 	line-height: 18px;
 	border: medium none;
 	width: 100%;
-	color: $color-secondary;
+	color: $color-text;
 }
 
 .comment-like-form {
