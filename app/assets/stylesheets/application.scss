@@ -30,7 +30,7 @@ html, body, .viewport {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	
+
 	background-color: #323232;
 	font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
@@ -231,4 +231,15 @@ a {
 .edit-links {
 	margin-top: 20px;
 	margin-bottom: 40px;
+}
+
+/* ## post submission form ## */
+
+#image-preview {
+	margin: 0px auto;
+}
+
+#post_image {
+	padding: 1em;
+	margin: 0px auto;
 }
