@@ -6,7 +6,10 @@ class PostsController < ApplicationController
 	# actions
 
 	def index
-		@posts = Post.all
+		@posts = Post.all.order('created_at DESC').page params[:page]
+		# ajax request will result in request.xhr? not nil
+		# layout will be true if request is not an ajax request
+		render action: :index, layout: request.xhr? == nil
 	end
 
 	def new

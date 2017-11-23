@@ -217,6 +217,34 @@ a {
 	}
 }
 
+/* ## pagination styling ## */
+
+#paginator {
+  color: $color-primary;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  :hover {
+	border: 1px solid $color-secondary;
+	border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+	color: $color-secondary;
+  }
+}
+
 /* ## Wrapper and styling for the new and edit views ## */
 
 .form-wrapper {
