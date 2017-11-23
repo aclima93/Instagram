@@ -245,6 +245,15 @@ a {
   }
 }
 
+.comments {
+  .paginator {
+	margin: 0.5em;
+	.more-comments {
+	  color: $color-secondary;
+	}
+  }
+}
+
 /* ## Wrapper and styling for the new and edit views ## */
 
 .form-wrapper {
