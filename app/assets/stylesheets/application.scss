@@ -22,6 +22,7 @@ $color-secondary: #FFBC65;
 $color-accent: #844A00;
 $color-background: #202020;
 $color-text: #f0f0f0;
+$colot-text-secondary: #818488;
 
 /* ## GENERAL CUSTOMISATIONS ## */
 
@@ -40,6 +41,10 @@ a {
 	&:hover {
 		color: $color-secondary;
 	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $color-primary;
 }
 
 /* ## REGISTRATION/LOGIN CUSTOMISATIONS ## */
@@ -220,38 +225,38 @@ a {
 /* ## pagination styling ## */
 
 #paginator {
-  color: $color-primary;
-  height: 120px;
-  width: 120px;
-  margin: 60px auto 40px;
-  position: relative;
-  display: table;
-  border: 2px solid $color-primary;
-  border-radius: 50%;
-  :hover {
-	border: 1px solid $color-secondary;
+	color: $color-primary;
+	height: 120px;
+	width: 120px;
+	margin: 60px auto 40px;
+	position: relative;
+	display: table;
+	border: 2px solid $color-primary;
 	border-radius: 50%;
-  }
+	:hover {
+		border: 1px solid $color-secondary;
+		border-radius: 50%;
+	}
 }
 
 #load_more {
-  display: table-cell;
-  font-size: 12px;
-  padding: 0px 9px;
-  vertical-align: middle;
-  text-decoration: none;
-  a :hover {
-	color: $color-secondary;
-  }
+	display: table-cell;
+	font-size: 12px;
+	padding: 0px 9px;
+	vertical-align: middle;
+	text-decoration: none;
+	a :hover {
+		color: $color-secondary;
+	}
 }
 
 .comments {
-  .paginator {
-	margin: 0.5em;
-	.more-comments {
-	  color: $color-secondary;
+	.paginator {
+		margin: 0.5em;
+		.more-comments {
+			color: $color-secondary;
+		}
 	}
-  }
 }
 
 /* ## Wrapper and styling for the new and edit views ## */
@@ -279,4 +284,48 @@ a {
 #post_image {
 	padding: 1em;
 	margin: 0px auto;
+}
+
+/* ## profile ## */
+
+#user_avatar {
+	margin: 20px auto;
+}
+
+.profile-header {
+	padding: 20px 0;
+}
+
+.profile-image {
+	margin: 20px auto;
+	height: 152px;
+	width: 152px;
+}
+
+.user-name-and-follow {
+	display: inline;
+	color: $color-secondary;
+}
+
+.profile-user-name {
+	display: inline;
+}
+
+.edit-button {
+	border-color: $color-secondary;
+	color: $color-primary;
+	&:hover {
+		color: $color-secondary;
+	}
+	margin-left: 20px;
+}
+
+.profile-bio {
+	margin-top: 20px;
+	color: $color-primary;
+}
+
+.user-statistics {
+	margin-top: 20px;
+	color: $color-primary;
 }
