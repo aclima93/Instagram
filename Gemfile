@@ -61,6 +61,7 @@ gem 'jquery-rails', '~> 4.3.1'
 gem 'devise', '~> 4.3.0'
 gem 'kaminari', '~> 1.1.1'
 gem 'jquery-turbolinks', '~> 2.1.0'
+gem 'acts_as_votable', '~> 0.11.1'
 
 # debug gem
 gem 'pry', '~> 0.11.3'
