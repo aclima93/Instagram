@@ -2,9 +2,7 @@
 	<div class="post">
 		<div class="post-head">
 			<div class="thumb-img"></div>
-			<div class="user-name">
-				<%= profile_link(post.user) %>
-			</div>
+			<%= profile_link(post.user) %>
 			<div class="time-ago">
 				<%= time_ago_in_words post.created_at %>
 			</div>
@@ -17,9 +15,7 @@
 			<%= render 'posts/likes', post:post %>
 
 			<div class="caption">
-				<div class="user-name">
-					<%= profile_link(post.user) %>
-				</div>
+				<%= profile_link(post.user) %>
 				<%= post.caption %>
 			</div>
 

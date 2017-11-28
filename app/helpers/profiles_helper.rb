@@ -1,7 +1,7 @@
 module ProfilesHelper
 
 	def profile_link(user)
-		link_to user.user_name, profile_path(user.user_name)
+		link_to user.user_name, profile_path(user.user_name), class: 'user-name'
 	end
 
 	def profile_avatar_select(user)
