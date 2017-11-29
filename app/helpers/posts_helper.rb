@@ -1,7 +1,30 @@
 module PostsHelper
 
-	# Our new helper method
-	def likers_of(post)
+	def like_toggle_path(post)
+		if current_user.liked? post
+			like_toggle_path = dislike_post_path(post)
+		else
+			like_toggle_path = like_post_path(post)
+		end
+	end
+
+	def like_icon_for_post(post)
+		if current_user.liked? post
+			"glyphicon-heart"
+		else
+			"glyphicon-heart-empty"
+		end
+	end
+
+	def display_likes(post)
+		if post.get_likes.size < 9
+			list_likers_of post
+		else
+			count_likers_of post
+		end
+	end
+
+	def list_likers_of(post)
 		# votes variable is set to the likes by users.
 		votes = post.votes_for.up.by_type(User)
 		# set user_names variable as an empty array
@@ -16,6 +39,10 @@ module PostsHelper
 			# present the array as a nice sentence using the as_sentence method and also make it usable within our html.  Then call the like_plural method with the votes variable we set earlier as the argument.
 			user_names.to_sentence.html_safe + like_plural(votes)
 		end
+	end
+
+	def count_likers_of(post)
+		"like".pluralize(post.likes)
 	end
 
 	private

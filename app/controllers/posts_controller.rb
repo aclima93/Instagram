@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-
-	before_action :set_post, only: [:show, :edit, :update, :destroy, :like]
+	before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :dislike]
 	before_action :owned_post, only: [:edit, :update, :destroy]
 
 	# actions
@@ -51,11 +50,18 @@ class PostsController < ApplicationController
 	end
 
 	def like
-		if @post.liked_by current_user
-			respond_to do |format|
-				format.html { redirect_to :back }
-				format.js
-			end
+		current_user.likes @post
+		respond_to do |format|
+			format.html { redirect_to :back }
+			format.js
+		end
+	end
+
+	def dislike
+		current_user.dislikes @post
+		respond_to do |format|
+			format.html { redirect_to :back }
+			format.js
 		end
 	end
 
