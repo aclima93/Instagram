@@ -5,4 +5,4 @@ $("#like_<%= @post.id %>").removeClass('glyphicon-heart').addClass('glyphicon-he
 $("#like_<%= @post.id %>").attr("href", "<%= like_post_path @post %>")
 
 // re-render likes information
-$("#likes_<%= @post.id %>").html("<%= j render 'likes', post: @post %>");
+$("#likes_<%= @post.id %>").html("<%= j render 'posts/likes', post: @post %>");
