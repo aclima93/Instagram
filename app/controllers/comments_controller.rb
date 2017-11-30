@@ -54,7 +54,8 @@ class CommentsController < ApplicationController
 
 	def create_notification(post, comment)
 		# don't notify the current user if he owns the post
-		return if post.user.id == current_user.id
+		return if post.user_id == current_user.id
 		Notification.create(user_id: post.user_id, notified_by_user_id: current_user.id, post_id: post.id, comment_id: comment.id, notification_type: 'comment')
 	end
+
 end

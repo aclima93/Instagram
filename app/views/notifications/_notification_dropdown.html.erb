@@ -1,0 +1,17 @@
+<div class="dropdown notification-dropdown">
+	<button class="btn btn-default dropdown-toggle aria-haspopup aria-expanded" type="button" id="dropdownMenu1", data-toggle="dropdown">
+		<%= current_user.notifications.count %>
+		<span class="glyphicon glyphicon-flag"></span>
+	</button>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="dropdown-header text-center">
+				Notifications
+			</div>
+		</li>
+
+		<!-- render the notifications -->
+		<%= render 'notifications/notification' %>
+
+	</ul>
+</div>

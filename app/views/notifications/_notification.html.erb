@@ -1,0 +1,5 @@
+<% current_user.notifications.order('created_at DESC').each do |notification| %>
+	<li id="<%= notification.id %>" >
+		<a href="<%= post_path(notification.post)%>"> Notification <%= notification.id %> - <%= notification.notification_type %> </a>
+	</li>
+<% end %>
