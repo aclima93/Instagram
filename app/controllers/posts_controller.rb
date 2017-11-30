@@ -91,7 +91,7 @@ class PostsController < ApplicationController
 	def create_like_notification(post)
 		# don't notify the current user if he owns the post
 		return if post.user_id == current_user.id
-		Notification.create(user_id: post.user_id, notified_by_user_id: current_user.id, post_id: post.id, notification_type: 'like')
+		 Notification.create(user_id: post.user_id, notified_by_user_id: current_user.id, post_id: post.id, notification_type: 'like')
 	end
 
 	def delete_like_notification(post)
