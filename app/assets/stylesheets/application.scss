@@ -350,3 +350,26 @@ h1, h2, h3, h4, h5, h6 {
 		border: none;
 	}
 }
+
+.read-notification {
+	background-color: #202020;
+	&:hover {
+		background-color: #818488;
+	}
+}
+
+.unread-notification {
+	background-color: #f0f0f0;
+	&:hover {
+		background-color: #818488;
+	}
+}
+
+.notification-index-list {
+	margin-top: 5em;
+	list-style: none;
+	li {
+		margin-top: 1em;
+		padding: 1em;
+	}
+}

@@ -1,11 +1,15 @@
-<% current_user.notifications.order('created_at DESC').each do |notification| %>
+<!-- show the 10 latest notifications -->
+<% current_user.notifications.order('created_at DESC').limit(10).each do |notification| %>
+
+<a href="<%= link_through_path(notification)%>" style="text-decoration:none;">
 	<li class="notifications-dropdown-item" id="<%= notification.id %>" >
 
-		<a href="<%= post_path(notification.post)%>">
+		<div class="<%= notification.read ? "read-notification" : "unread-notification" %>">
 			<%= notification_alert_message notification %>
 			<br>
 			<small> <%= time_ago_in_words notification.created_at %> </small>
-		</a>
+		</div>
 
 	</li>
+</a>
 <% end %>

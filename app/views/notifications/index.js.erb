@@ -1,0 +1,3 @@
+$('#notifications').append("<%= escape_javascript(render 'notifications') %>");
+$('#paginator').html("<%= escape_javascript(link_to_next_page(@notifications, 'Load More', remote: true, id: 'load_more')) %>")
+if (!$('#load_more').length) { $('#paginator').remove(); }
